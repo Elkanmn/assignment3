@@ -1,0 +1,145 @@
+:root {
+    --accent: #3159d8;
+    --accent-dark: #2447b5;
+    --ink: #18212f;
+    --muted: #667085;
+    --soft: #eef3ff;
+    --line: #dfe4ec;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--ink);
+    background: #ffffff;
+}
+
+.navbar-brand {
+    letter-spacing: -0.4px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+.text-primary {
+    color: var(--accent) !important;
+}
+
+.hero-visual {
+    background: linear-gradient(135deg, #dfe8ff, #f2f5ff);
+}
+
+.mini-card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.about-visual {
+    background: linear-gradient(135deg, #eef3ff, #e9f7f4);
+}
+
+.feature-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--accent);
+    font-weight: 700;
+}
+
+
+/* Task 1: mobile-first responsive section made without Bootstrap classes. */
+.manual-features {
+    padding: 64px 0;
+    background: #ffffff;
+}
+
+.manual-container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.manual-heading {
+    margin-bottom: 28px;
+}
+
+.manual-heading h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.manual-heading > p:last-child {
+    margin: 0;
+    color: var(--muted);
+}
+
+.manual-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.manual-card {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.manual-number {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.manual-card h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+}
+
+.manual-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+@media (min-width: 768px) {
+    .manual-features {
+        padding: 76px 0;
+    }
+
+    .manual-heading {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    .manual-heading h2 {
+        font-size: 34px;
+    }
+
+    .manual-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .manual-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
